@@ -1,0 +1,1 @@
+If you reached this page you are likely better at websites than I am. Want to help me? email me at the email on my website.
