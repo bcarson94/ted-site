@@ -1,20 +1,30 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = 'DSC_2525.webp' } = Astro.props
+const { src = 'tedheadshot.webp' } = Astro.props
 ---
 
-<section class="hero my-24">
+<section class="hero my-4">
   <div class="container">
+  <div class="container">
+  <h2 class="text-center text-6xl lg:text-7xl mb-12">
+    <span class="text-white">Compassion.</span>
+    <span class="text-white">Safety.</span>
+    <span class="text-white">Collaboration.</span>
+  </h2>
+
+ 
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+    
       <div class="flex flex-col items-center gap-8 md:items-start">
+      
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+        
           <slot> <span class="text-blue"></span> </slot>
+          
         </h1>
-        <h2>
-          Vote for the <span class="text-yellow">Tippecanoe</span> Way.
-          Vote for Ben Carson.
-        </h2>
+       
+        <h2>Ted Hardesty for Fairfield Township Trustee.</h2>
         <div class="flex flex-col gap-3 min-[500px]:flex-row" id="mycustomid">
           <a href="#test2" class="button has-icon">
             <Icon pack="ion" name="book-outline" />
@@ -22,26 +32,10 @@ const { src = 'DSC_2525.webp' } = Astro.props
           </a>
           <a
             class="button has-icon color-secondary"
-            href="https://secure.actblue.com/donate/bencarson" target="_blank" rel="noreferrer noopener">
+            href="https://secure.actblue.com/donate/tedhardesty4fairfield" target="_blank" rel="noreferrer noopener">
             <Icon pack="ion" name="wallet-outline" color="white"/>
-            <div class="text-yellow">Donate to our campaign</div>
+            <div class="text-yellow">Donate to my campaign</div>
           </a>
-        </div>
-       
-        <h3 class="text-center w-full">Proudly endorsed by:</h3>
-        <div class="text-cycler">
-          
-          <button class="prev-button" aria-label="Previous endorsement">
-            <svg viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="m14 7-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
-          <span class="text-display">Erin Easter - West Lafayette Mayor</span>
-          <button class="next-button" aria-label="Next endorsement">
-            <svg viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="m10 7 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
         </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
@@ -49,58 +43,7 @@ const { src = 'DSC_2525.webp' } = Astro.props
   </div>
 </section>
 
-<script>
-  console.log("Text cycler script is running");
 
-  const texts = [
-    "Tony Roswarski - Lafayette Mayor",
-    "Erin Easter - West Lafayette Mayor",
-    "Sheila Klinker - State Rep. 27",
-    "Chris Campbell - State Rep. 26",
-    "Angel Valentin - Wabash Township Trustee",
-    "Monica Casanova - Fairfield Township Trustee",
-    "Nancy Nargi - Lafayette City Council",
-    "Perry Brown - Lafayette City Council",
-    "Eileen Hession Weiss - Lafayette City Council",
-    "Bob Downing - Lafayette City Council",
-    "James Blanco - West Lafayette City Council",
-    "Stacey Burr - West Lafayette City Council",
-    "Iris O'Donnell Bellisario - West Lafayette City Council",
-    "Kathy Parker - West Lafayette City Council",
-  ];
-  let currentIndex = 0;
-
-  const textDisplay = document.querySelector('.text-display') as HTMLElement | null;
-  const prevButton = document.querySelector('.prev-button') as HTMLButtonElement | null;
-  const nextButton = document.querySelector('.next-button') as HTMLButtonElement | null;
-
-  function updateText() {
-    if (textDisplay) {
-      textDisplay.textContent = texts[currentIndex];
-      console.log("Text updated to:", texts[currentIndex]);
-    }
-  }
-
-  if (prevButton && nextButton && textDisplay) {
-    console.log("All elements found, adding event listeners");
-    prevButton.addEventListener('click', () => {
-      console.log("Prev button clicked");
-      currentIndex = (currentIndex - 1 + texts.length) % texts.length;
-      updateText();
-    });
-
-    nextButton.addEventListener('click', () => {
-      console.log("Next button clicked");
-      currentIndex = (currentIndex + 1) % texts.length;
-      updateText();
-    });
-
-    // Initialize the text
-    updateText();
-  } else {
-    console.error('One or more elements not found');
-  }
-</script>
 
 <style lang="scss">
   .text-cycler {
@@ -154,7 +97,7 @@ const { src = 'DSC_2525.webp' } = Astro.props
   }
 
   .text-yellow{
-    color: hsl(44, 98%,45%)
+    color: hsl(0, 0%, 100%)
   }
 
   .text-blue{
